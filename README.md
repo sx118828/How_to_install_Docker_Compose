@@ -8,10 +8,10 @@
 `sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc`
 `sudo chmod a+r /etc/apt/keyrings/docker.asc`
 * Добавить репозиторий в APT-источники:
-`echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null`
+`echo \`
+  `"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \`
+  `$(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \`
+  `sudo tee /etc/apt/sources.list.d/docker.list > /dev/null`
 `sudo apt-get update`
 ## 2. Установить пакеты Docker:
 * Чтобы установить последнюю версию, запустите:
