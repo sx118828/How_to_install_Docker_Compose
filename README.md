@@ -27,15 +27,30 @@
 
 ## 2. Установить пакеты Docker:
 * Чтобы установить последнюю версию, запустите:
+
 `sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin`
+
 * Чтобы установить определенную версию Docker Engine, начните с перечисления доступных версий в репозитории:
+
 `apt-cache madison docker-ce | awk '{ print $3 }'`
+
 `5:27.5.1-1~ubuntu.24.04~noble`
+
 `5:27.5.0-1~ubuntu.24.04~noble`
+
 `...`
+
 * Выберите нужную версию и установите:
+
 `VERSION_STRING=5:27.5.1-1~ubuntu.24.04~noble`
+
 `sudo apt-get install docker-ce=$VERSION_STRING docker-ce-cli=$VERSION_STRING containerd.io docker-buildx-plugin docker-compose-plugin`
+
+## 3. Проверьте, что установка прошла успешно, запуская образ `hello-world`:
+
+`sudo docker run hello-world`
+
+### Эта команда загружает тестовый образ и запускает его в контейнер. Когда контейнер запускается, он печатает подтверждение и выходит.
 
 
 
