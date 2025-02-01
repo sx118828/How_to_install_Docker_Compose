@@ -12,3 +12,14 @@
     `~/.docker/cli-plugins` на `/usr/local/lib/docker/cli-plugins`.
 * Другая версия Compose, замените `v2.32.4` на ту версию Compose, которую вы хотите использовать.
 * Для другой архитектуры, замените x86_64 на нужную вам [архитектуру](https://github.com/docker/compose/releases).
+## 2. Применить права исполняемого файла к бинару:
+* `chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose`
+  или, если вы установите Compose для всех пользователей:
+* `sudo chmod +x /usr/local/lib/docker/cliplugins/docker-compose`
+## 3. Проверить установку:
+* `docker compose version`
+  ожидаемый результат:
+* `Docker Compose version v2.32.4`
+
+
+ 
